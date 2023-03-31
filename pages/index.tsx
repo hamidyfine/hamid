@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Button } from '@chakra-ui/react';
+import { Bookmark } from '@icon-park/react';
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
                     Hello world!
                 </h1>
                 <Button colorScheme='blue'>Button</Button>
+                <Bookmark />
             </main>
         </>
     );
