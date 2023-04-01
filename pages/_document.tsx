@@ -1,8 +1,15 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Main, NextScript, Head, DocumentContext } from 'next/document';
 
-export default function Document() {
+type TProps = {
+    locale: string;
+};
+
+const MyDocument = (props: TProps) => {
     return (
-        <Html lang="en">
+        <Html
+            dir={props.locale === 'fa' ? 'rtl' : 'ltr'}
+            lang={props.locale}
+        >
             <Head />
             <body>
                 <Main />
@@ -10,4 +17,11 @@ export default function Document() {
             </body>
         </Html>
     );
-}
+};
+
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps, locale: ctx?.locale || 'en' };
+};
+
+export default MyDocument;

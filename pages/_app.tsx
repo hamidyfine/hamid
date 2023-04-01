@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import {IconProvider, DEFAULT_ICON_CONFIGS} from '@icon-park/react';
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 import '@fontsource/ubuntu';
 import '@/styles/globals.scss';
 
@@ -13,7 +14,7 @@ const theme = extendTheme({
     },
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
     return (
         <ChakraProvider theme={theme}>
             <IconProvider value={IconConfig}>
@@ -21,4 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
             </IconProvider>
         </ChakraProvider>
     );
-}
+};
+
+export default appWithTranslation(App);
