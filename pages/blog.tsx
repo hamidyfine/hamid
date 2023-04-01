@@ -2,10 +2,8 @@ import { GetServerSidePropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import { Button } from '@chakra-ui/react';
-import { Bookmark } from '@icon-park/react';
 
-const Home = () => {
+const Blog = () => {
     const { t } = useTranslation(['common', 'button']);
 
     return (
@@ -24,15 +22,8 @@ const Home = () => {
             </Head>
             <main>
                 <h1 className="text-3xl font-bold underline">
-                    Hello world!
+                    Hello world! Blog Page
                 </h1>
-                <Button colorScheme='blue'>Button</Button>
-                <Bookmark />
-                
-                <br />
-                <br />
-                <h1>{t('home.Home title')}</h1>
-                <span>{t('btn.text', { ns: 'button' })}</span>
             </main>
         </>
     );
@@ -46,4 +37,4 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     };
 };
 
-export default Home;
+export default Blog;

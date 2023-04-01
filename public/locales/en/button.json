@@ -1,5 +1,8 @@
 {
-    "btn": {
-        "text": "Click me"
+    "nav": {
+        "blog": "Blog",
+        "projects": "Projects",
+        "resume": "Resume",
+        "contact": "Contact"
     }
 }
