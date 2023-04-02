@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { Container, Avatar, Button } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { NAVIGATION } from '@/utils/constants';
-import DarkModeSwitcher from '../dark-mode-switcher';
+import Container from '../container';
+import Image from 'next/image';
+// import DarkModeSwitcher from '../dark-mode-switcher';
 // import LocaleSwitcher from '../locale-switcher';
 
 const AppHeader = () => {
@@ -22,29 +23,32 @@ const AppHeader = () => {
     }, [router.locale]);
 
     return (
-        <header className='p-8'>
-            <Container maxW='4xl'>
-                <div className='flex items-center justify-between'>
-                    <Link href='/'>
-                        <Avatar
-                            name='Hamid Website'
-                            src='/h-logo.png'
-                            size='md'
+        <header className="p-8">
+            <Container>
+                <div className="flex items-center justify-between">
+                    <Link href="/">
+                        <Image
+                            alt="Hamid Website"
+                            src="/h-logo.png"
+                            className="rounded-full"
+                            width={50}
+                            height={50}
                         />
                     </Link>
 
                     <nav>
-                        <ul className='flex items-center justify-end'>
+                        <ul className="flex items-center justify-end">
                             {NAVIGATION.map((item, index) => {
                                 return (
                                     <li
-                                        className='ml-2'
+                                        className="ml-2"
                                         key={index}
                                     >
-                                        <Link href={item.href}>
-                                            <Button variant='ghost'>
-                                                {t(`nav.${item.slug}`, { ns: 'button' })}
-                                            </Button>
+                                        <Link
+                                            className="hover:bg-gray-200 py-2 px-4 rounded-md transition-all"
+                                            href={item.href}
+                                        >
+                                            {t(`nav.${item.slug}`, { ns: 'button' })}
                                         </Link>
                                     </li>
                                 );
@@ -52,9 +56,9 @@ const AppHeader = () => {
                             {/* <li className='ml-2'>
                                 <LocaleSwitcher />
                             </li> */}
-                            <li className='ml-2'>
+                            {/* <li className="ml-2">
                                 <DarkModeSwitcher />
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                 </div>

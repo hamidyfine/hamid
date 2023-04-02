@@ -1,11 +1,15 @@
-import { Container } from '@chakra-ui/react';
+import classNames from 'classnames';
 
-const AppContainer = ({ children }: React.PropsWithChildren<{}>) => {
+type TProps = {
+    className?: string;
+};
+
+const Container = ({ children, className }: React.PropsWithChildren<TProps>) => {
     return (
-        <Container maxW='4xl'>
+        <div className={classNames('container mx-auto', className)}>
             {children}
-        </Container>
+        </div>
     );
 };
 
-export default AppContainer;
+export default Container;

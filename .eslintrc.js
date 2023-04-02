@@ -28,5 +28,6 @@ module.exports = {
         'max-len'                              : ['error', { code: 256 }],
         'no-trailing-spaces'                   : ['error', { skipBlankLines: true, ignoreComments: true }],
         'key-spacing'                          : ['error', { align: 'colon' }],
+        'jsx-quotes'                           : ['error', 'prefer-double']
     },
 };

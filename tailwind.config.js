@@ -7,7 +7,14 @@ module.exports = {
         './src/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        fontFamily: {
+            'sans': ['\'Nunito\', sans-serif', 'system-ui']
+        },
+        container: {
+            screens: {
+                xl: '800px'
+            },
+        }
     },
     plugins: [
         require('@tailwindcss/typography'),

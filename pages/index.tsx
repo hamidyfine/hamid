@@ -2,10 +2,9 @@ import { GetStaticPropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import MarkdownContent from '@/components/markdown-content';
 import { getContentBySlug } from '@/utils/api';
 import { TPost } from '@/types';
-import AppContainer from '@/components/container';
+import Container from '@/components/container';
 
 type TProps = {
     post: TPost,
@@ -20,24 +19,26 @@ const Home = ({ post }: TProps) => {
                 <title>{t('home.page-title')}</title>
             </Head>
             <main>
-                <AppContainer>
-                    <MarkdownContent content={post.content} />
-                </AppContainer>
+                <Container>
+                    <div className="py-16">
+                        <p className="text-lg font-semibold mb-2">
+                            {t('home.intro.title')}
+                        </p>
+                        <h1 className="text-5xl font-extrabold mb-4">
+                            {t('home.intro.job-title-pre')} <span className="text-purple-600">{t('home.intro.job-title')}</span>
+                        </h1>
+                        <p className="text-xl">
+                            {t('home.intro.body')}
+                        </p>
+                    </div>
+                </Container>
             </main>
         </>
     );
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-    const post = getContentBySlug('intro', [
-        'title',
-        'date',
-        'slug',
-        'author',
-        'content',
-        'ogImage',
-        'coverImage',
-    ], 'content');
+    const post = getContentBySlug('intro', ['title', 'excerpt', 'slug', 'content'], 'content');
 
     return {
         props: {

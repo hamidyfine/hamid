@@ -1,7 +1,12 @@
 {
     "home": {
         "page-title": "Hamid Yaftian | Front-end Developer | Home",
-        "intro": ""
+        "intro": {
+            "title": "Hey! I’m Hamid 👋",
+            "job-title-pre": "I'm a",
+            "job-title": "frontend developer",
+            "body": "Experienced with React, VueJS, TypeScript, and SASS and focused on mastering React and TypeScript. Here, I write about web development, coding, testing, tools, and sometimes life."
+        }
     },
     "footer": {
         "text": "Designed by me with inspiration from other websites."
