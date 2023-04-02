@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { getContentBySlug } from '@/utils/api';
 import { TPost } from '@/types';
 import Container from '@/components/container';
+import ContactCTA from '@/components/contact-cta';
 
 type TProps = {
     post: TPost,
@@ -27,10 +28,12 @@ const Home = ({ post }: TProps) => {
                         <h1 className="text-5xl font-extrabold mb-4">
                             {t('home.intro.job-title-pre')} <span className="text-purple-600">{t('home.intro.job-title')}</span>
                         </h1>
-                        <p className="text-xl">
+                        <p className="text-xl leading-relaxed">
                             {t('home.intro.body')}
                         </p>
                     </div>
+
+                    <ContactCTA />
                 </Container>
             </main>
         </>

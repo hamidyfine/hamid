@@ -4,5 +4,14 @@
         "projects": "Projects",
         "resume": "Resume",
         "contact": "Contact"
+    },
+    "download-resume": "Download Resume",
+    "contact": "Let's Talk",
+    "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter",
+        "email": "Email",
+        "telegram": "Telegram"
     }
 }

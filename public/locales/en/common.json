@@ -8,6 +8,12 @@
             "body": "Experienced with React, VueJS, TypeScript, and SASS and focused on mastering React and TypeScript. Here, I write about web development, coding, testing, tools, and sometimes life."
         }
     },
+    "contact": {
+        "cta": {
+            "title": "Let's Talk",
+            "body": "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you! Also you can find me on Github, Linkedin, Twitter and Telegram."
+        }
+    },
     "footer": {
         "text": "Designed by me with inspiration from other websites."
     }

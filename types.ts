@@ -29,3 +29,18 @@ export type TPost = {
         url: string;
     };
 }
+
+/**
+ * Social item
+ */
+export type TSocialItem = {
+    href: string;
+    icon: JSX.Element;
+};
+
+/**
+ * Socials List
+ */
+export type TSocials = {
+    [k: string]: TSocialItem;
+}
