@@ -6,6 +6,7 @@ import { getContentBySlug } from '@/utils/api';
 import { TPost } from '@/types';
 import Container from '@/components/container';
 import ContactCTA from '@/components/contact-cta';
+import Intro from '@/components/intro';
 
 type TProps = {
     post: TPost,
@@ -21,18 +22,7 @@ const Home = ({ post }: TProps) => {
             </Head>
             <main>
                 <Container>
-                    <div className="py-16">
-                        <p className="text-lg font-semibold mb-2">
-                            {t('home.intro.title')}
-                        </p>
-                        <h1 className="text-5xl font-extrabold mb-4">
-                            {t('home.intro.job-title-pre')} <span className="text-purple-600">{t('home.intro.job-title')}</span>
-                        </h1>
-                        <p className="text-xl leading-relaxed">
-                            {t('home.intro.body')}
-                        </p>
-                    </div>
-
+                    <Intro />
                     <ContactCTA />
                 </Container>
             </main>
