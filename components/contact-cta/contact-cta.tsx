@@ -3,13 +3,14 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import SocialLink from '../social-link';
 import { DownloadOne } from '@icon-park/react';
+import Container from '../container/container';
 
 const ContactCTA = () => {
     const { t } = useTranslation(['common', 'button']);
     const socialKeys = Object.keys(SOCIAL);
     
     return (
-        <div className="border-purple-600 border-4 p-10 rounded-md">
+        <Container className="border-purple-600 border-4 p-10 rounded-md">
             <h2 className="text-4xl font-bold mb-4">
                 {t('contact.cta.title')}
             </h2>
@@ -28,7 +29,7 @@ const ContactCTA = () => {
                             fill="#fff"
                             className="mr-1"
                         />
-                        {t('download-resume', { ns: 'button' })}
+                        {t('resume.download', { ns: 'button' })}
                     </Link>
                     <Link
                         className="text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md"
@@ -54,7 +55,7 @@ const ContactCTA = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </Container>
     );
 };
 

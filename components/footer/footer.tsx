@@ -5,9 +5,9 @@ const AppFooter = () => {
     const { t } = useTranslation();
 
     return (
-        <footer className="app-footer fixed bottom-0 left-0 right-0 p-4 bg-gray-100">
+        <footer className="p-4 mt-8 bg-gray-100">
             <Container className="text-center">
-                <p className="center">
+                <p className="center text-xs text-gray-600">
                     {t('footer.text')}
                 </p>
             </Container>

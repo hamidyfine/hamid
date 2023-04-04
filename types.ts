@@ -1,23 +1,18 @@
-/**
- * Navigation item
- */
-export type TNavItem = {
+type TNavItem = {
     slug: string;
     href: string;
 };
 
-/**
- * Post fields
- */
-export type TFields = 'slug' | 'title' | 'date' | 'content' | 'excerpt' | 'coverImage' | 'ogImage' | 'author';
+export type TNavigation = {
+    [k: string]: TNavItem;
+}
 
-/**
- * Post type
- */
+export type TFields = 'slug' | 'title' | 'date' | 'content' | 'excerpt' | 'coverImage' | 'ogImage' | 'author' | 'tags' | 'category' | 'readingTime';
+
 export type TPost = {
     slug: string;
     title?: string;
-    date?: string | Date;
+    date?: string;
     content?: string;
     excerpt?: string;
     coverImage?: string;
@@ -28,19 +23,16 @@ export type TPost = {
     ogImage?: {
         url: string;
     };
+    tags?: string;
+    category?: string;
+    readingTime?: string;
 }
 
-/**
- * Social item
- */
 export type TSocialItem = {
     href: string;
     icon: JSX.Element;
 };
 
-/**
- * Socials List
- */
 export type TSocials = {
     [k: string]: TSocialItem;
 }

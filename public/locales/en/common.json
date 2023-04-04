@@ -14,6 +14,30 @@
             "body": "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you! Also you can find me on Github, Linkedin, Twitter and Telegram."
         }
     },
+    "blog": {
+        "latest": {
+            "title": "Latest Posts",
+            "subtitle": "Here are some of my latest posts. You can also check out my blog archive.",
+            "more_posts": "More Posts"
+        }
+    },
+    "projects": {
+        "latest": {
+            "title": "Latest Projects",
+            "subtitle": "Here are some of my latest projects. You can also check out my project archive.",
+            "more_posts": "More Projects"
+        }
+    },
+    "resume": {
+        "title": "Resume",
+        "subtitle": "Here is my resume. You can also download it in PDF format.",
+        "download": "Download PDF",
+        "view": "About me",
+        "timeline": {
+            "title": "Timeline",
+            "subtitle": ""
+        }
+    },
     "footer": {
         "text": "Designed by me with inspiration from other websites."
     }

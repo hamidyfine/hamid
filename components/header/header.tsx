@@ -11,6 +11,7 @@ import Image from 'next/image';
 const AppHeader = () => {
     const { t } = useTranslation(['button']);
     const router = useRouter();
+    const navSlug = Object.keys(NAVIGATION);
 
     /**
      * Change the locale and direction of the page on locale change
@@ -38,7 +39,7 @@ const AppHeader = () => {
 
                     <nav>
                         <ul className="flex items-center justify-end">
-                            {NAVIGATION.map((item, index) => {
+                            {navSlug.map((slug, index) => {
                                 return (
                                     <li
                                         className="ml-2"
@@ -46,9 +47,9 @@ const AppHeader = () => {
                                     >
                                         <Link
                                             className="hover:bg-gray-200 py-2 px-4 rounded-md transition-all"
-                                            href={item.href}
+                                            href={NAVIGATION[slug].href}
                                         >
-                                            {t(`nav.${item.slug}`, { ns: 'button' })}
+                                            {t(`nav.${NAVIGATION[slug].slug}`, { ns: 'button' })}
                                         </Link>
                                     </li>
                                 );

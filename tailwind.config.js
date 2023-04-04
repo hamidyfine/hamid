@@ -8,7 +8,7 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'sans': ['\'Nunito\', sans-serif', 'system-ui']
+            'sans': ['\'Ubuntu\', sans-serif', 'system-ui']
         },
         container: {
             screens: {

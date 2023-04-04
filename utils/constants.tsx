@@ -1,28 +1,28 @@
 /* eslint-disable react/jsx-max-props-per-line */
-import type { TNavItem, TSocials } from '@/types';
+import type { TNavigation, TSocials } from '@/types';
 import { GithubOne, InstagramOne, Twitter, EmailSuccessfully, Telegram } from '@icon-park/react';
 
 /**
  * Navigation constants
  */
-export const NAVIGATION: TNavItem[] = [
-    {
+export const NAVIGATION: TNavigation = {
+    blog: {
         slug: 'blog',
         href: '/blog',
     },
-    {
+    projects: {
         slug: 'projects',
         href: '/projects',
     },
-    {
+    resume: {
         slug: 'resume',
         href: '/resume',
     },
-    {
+    contact: {
         slug: 'contact',
-        href: '/contact',
+        href: 'mailto:hamid.yaftian@gmail.com'
     },
-];
+};
 
 /**
  * Social constants

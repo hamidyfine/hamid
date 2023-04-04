@@ -1,12 +1,11 @@
 import {IconProvider, DEFAULT_ICON_CONFIGS} from '@icon-park/react';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 import AppHeader from '@/components/header';
 import AppFooter from '@/components/footer';
-import '@fontsource/ubuntu';
-import '@fontsource/nunito';
+import ContactCTA from '@/components/contact-cta';
 import '@/styles/globals.scss';
-import Head from 'next/head';
 
 const IconConfig = {...DEFAULT_ICON_CONFIGS, prefix: 'icon'};
 
@@ -21,7 +20,11 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
       
             <AppHeader />
-            <Component {...pageProps} />
+            <Component
+                className="min-h-screen"
+                {...pageProps}
+            />
+            <ContactCTA />
             <AppFooter />
         </IconProvider>
     );

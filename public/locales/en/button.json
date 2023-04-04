@@ -3,9 +3,12 @@
         "blog": "Blog",
         "projects": "Projects",
         "resume": "Resume",
-        "contact": "Contact"
+        "contact": "Let's Talk"
     },
-    "download-resume": "Download Resume",
+    "resume": {
+        "download": "Download Resume",
+        "view": "About me"
+    },
     "contact": "Let's Talk",
     "social": {
         "github": "GitHub",
