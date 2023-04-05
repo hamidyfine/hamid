@@ -139,3 +139,14 @@ export type TProject = {
     watchers: number;
     default_branch: string;
 };
+
+export type TExperience = {
+    title: string;
+    company: string;
+    location: string;
+    start_date: string;
+    end_date: string;
+    duration: string;
+    stack: string[];
+    description: string[];
+};

@@ -3,6 +3,7 @@ import type { TNavigation, TSocials } from '@/types';
 import { GithubOne, InstagramOne, Twitter, EmailSuccessfully, Telegram } from '@icon-park/react';
 
 export const GITHUB_LINK: string = 'https://api.github.com/users/hamidyfine/repos';
+export const IGNORED_PROJECTS: string[] = ['hamidyfine', 'vuex-issue', 'gatsby-starter-kit', 'gatsby-starter', 'nuxt-starter'];
 
 export const NAVIGATION: TNavigation = {
     blog: {
@@ -46,4 +47,3 @@ export const SOCIAL: TSocials = {
     },
 };
 
-export const IGNORED_PROJECTS: string[] = ['hamidyfine', 'vuex-issue', 'gatsby-starter-kit', 'gatsby-starter', 'nuxt-starter'];
