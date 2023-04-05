@@ -26,6 +26,11 @@
             "title": "Latest Projects",
             "subtitle": "Here are some of my latest projects. You can also check out my project archive.",
             "more_posts": "More Projects"
+        },
+        "templates": {
+            "title": "Template",
+            "subtitle": "Templates are the starter kit includes all you need to build amazing projects",
+            "more_posts": "More Templates"
         }
     },
     "resume": {
