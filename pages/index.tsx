@@ -10,7 +10,7 @@ import Heading from '@/components/heading';
 import BlogCard from '@/components/blog-card';
 import { GITHUB_LINK, NAVIGATION } from '@/utils/constants';
 import ProjectCard from '@/components/project-card';
-import { categorized_repo } from '@/utils';
+import { projects_list } from '@/utils';
 import TimelineCard from '@/components/timeline-card';
 import { experiences } from '@/data/resume';
 
@@ -58,7 +58,7 @@ const Home = ({ posts, projects }: TProps) => {
                     )}
 
                     {/* Latest Projects */}
-                    {categorized_repo(projects, null, 'template').length && (
+                    {projects_list(projects).length && (
                         <>
                             <Heading
                                 title={t('projects.latest.title')}
@@ -70,7 +70,7 @@ const Home = ({ posts, projects }: TProps) => {
                                 fluid
                                 mb
                             >
-                                {categorized_repo(projects, null, 'template').map((project, index) => {
+                                {projects_list(projects).map((project, index) => {
                                     return (
                                         <ProjectCard
                                             project={project}
@@ -81,30 +81,6 @@ const Home = ({ posts, projects }: TProps) => {
                             </Container>
                         </>
                     )}
-
-                    {/* Latest Templates */}
-                    {categorized_repo(projects, 'template', null).length && (
-                        <>
-                            <Heading
-                                title={t('projects.templates.title')}
-                                subtitle={t('projects.templates.subtitle')}
-                            />
-                            <Container
-                                fluid
-                                mb
-                            >
-                                {categorized_repo(projects, 'template', null).map((project, index) => {
-                                    return (
-                                        <ProjectCard
-                                            project={project}
-                                            key={index}
-                                        />
-                                    );
-                                })}
-                            </Container>
-                        </>
-                    )}
-                   
 
                     {/* Timeline */}
                     {experiences.length && (

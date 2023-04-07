@@ -30,7 +30,8 @@
         "templates": {
             "title": "Template",
             "subtitle": "Templates are the starter kit includes all you need to build amazing projects",
-            "more_posts": "More Templates"
+            "more_posts": "More Templates",
+            "is_template": "starter-kit"
         }
     },
     "resume": {

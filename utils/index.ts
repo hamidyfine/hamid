@@ -16,6 +16,12 @@ export const should_show_project = (project: TProject) => {
     return !project.fork && !project.archived && !project.disabled && !project.private && !IGNORED_PROJECTS.includes(project.name);
 };
 
+export const is_template_project = (project: TProject) => project.topics?.includes('template');
+
+export const projects_list = (projects: TProject[]) => {
+    return sort_projects_by_date(projects.filter((project) => should_show_project(project)));
+};
+
 export const categorized_repo = (projects: TProject[], include?: string | null, exclude?: string | null) => {
     let repos: TProject[] = [];
     if (include) repos = projects.filter((project) => should_show_project(project) && project.topics?.includes(include));

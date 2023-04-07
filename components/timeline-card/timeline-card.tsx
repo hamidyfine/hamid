@@ -3,9 +3,10 @@ import { BuildingOne, World } from '@icon-park/react';
 
 type TProps = {
     experience: TExperience,
+    show_description?: boolean,
 }
 
-const TimelineCard = ({ experience }: TProps) => {
+const TimelineCard = ({ experience, show_description }: TProps) => {
     return (
         <div className="mb-8">
             <div className="flex items-start justify-between">
@@ -60,18 +61,20 @@ const TimelineCard = ({ experience }: TProps) => {
                 </div>
             </div>
 
-            <ul className="ml-4">
-                {experience.description.map((desc, index) => {
-                    return (
-                        <li
-                            className="list-disc text-sm font-thin leading-relaxed mb-1"
-                            key={index}
-                        >
-                            {desc}
-                        </li>
-                    );
-                })}
-            </ul>
+            {show_description && (
+                <ul className="ml-4">
+                    {experience.description.map((desc, index) => {
+                        return (
+                            <li
+                                className="list-disc text-sm font-thin leading-relaxed mb-1"
+                                key={index}
+                            >
+                                {desc}
+                            </li>
+                        );
+                    })}
+                </ul>
+            )}
         </div>
     );
 };

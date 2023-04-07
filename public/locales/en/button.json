@@ -16,5 +16,8 @@
         "twitter": "Twitter",
         "email": "Email",
         "telegram": "Telegram"
+    },
+    "project": {
+        "source": "Source"
     }
 }
