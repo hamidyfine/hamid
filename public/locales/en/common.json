@@ -39,6 +39,7 @@
         "subtitle": "Here is my resume. You can also download it in PDF format.",
         "download": "Download PDF",
         "view": "About me",
+        "view_all_experience": "View Full Timeline",
         "timeline": {
             "title": "Timeline",
             "subtitle": ""

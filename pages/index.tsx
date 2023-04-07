@@ -13,6 +13,8 @@ import ProjectCard from '@/components/project-card';
 import { projects_list } from '@/utils';
 import TimelineCard from '@/components/timeline-card';
 import { experiences } from '@/data/resume';
+import Link from 'next/link';
+import { ArrowRight } from '@icon-park/react';
 
 type TProps = {
     posts: TPost[],
@@ -95,7 +97,7 @@ const Home = ({ posts, projects }: TProps) => {
                                 fluid
                                 mb
                             >
-                                {experiences.map((experience, index) => {
+                                {experiences.slice(0, 3).map((experience, index) => {
                                     return (
                                         <TimelineCard
                                             experience={experience}
@@ -103,6 +105,16 @@ const Home = ({ posts, projects }: TProps) => {
                                         />
                                     );
                                 })}
+
+                                <Link href={NAVIGATION.resume.href}>
+                                    <div className="flex items-center justify-center bg-gray-100 rounded-md text-sm transition-all hover:bg-purple-500 hover:text-white p-2 cursor-pointer">
+                                        {t('resume.view_all_experience')}
+                                        <ArrowRight
+                                            className="ml-1 relative top-px"
+                                            theme="outline"
+                                        />
+                                    </div>
+                                </Link>
                             </Container>
                         </>
                     )}
