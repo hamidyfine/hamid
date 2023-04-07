@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 type TProps = {
     title: string;
-    subtitle: string;
+    subtitle?: string;
     more_button_text?: string;
     more_button_link?: string;
 };

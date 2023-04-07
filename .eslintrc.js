@@ -6,6 +6,7 @@ module.exports = {
         quotes                                 : ['error', 'single'],
         semi                                   : 'error',
         'eol-last'                             : ['error', 'always'],
+        'no-unused-vars'                       : 'error',
         'no-console'                           : process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off',
         'no-debugger'                          : process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'padded-blocks'                        : ['error', 'never'],

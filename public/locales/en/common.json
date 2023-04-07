@@ -15,6 +15,8 @@
         }
     },
     "blog": {
+        "page-title": "Hamid Yaftian | Front-end Developer | Blog",
+        "title": "Blog",
         "latest": {
             "title": "Latest Posts",
             "subtitle": "Here are some of my latest posts. You can also check out my blog archive.",
@@ -22,16 +24,12 @@
         }
     },
     "projects": {
+        "page-title": "Hamid Yaftian | Front-end Developer | Projects",
+        "title": "Projects",
         "latest": {
             "title": "Latest Projects",
             "subtitle": "Here are some of my latest projects. You can also check out my project archive.",
             "more_posts": "More Projects"
-        },
-        "templates": {
-            "title": "Template",
-            "subtitle": "Templates are the starter kit includes all you need to build amazing projects",
-            "more_posts": "More Templates",
-            "is_template": "starter-kit"
         }
     },
     "resume": {

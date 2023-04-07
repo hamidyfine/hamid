@@ -23,7 +23,6 @@ type TProps = {
 
 const Home = ({ posts, projects }: TProps) => {
     const { t } = useTranslation(['common', 'button']);
-    console.log('t', t('experiences', { ns: 'resume' }));
 
     return (
         <>
@@ -39,15 +38,12 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('blog.latest.title')}
-                                subtitle={t('blog.latest.subtitle')}
+                                subtitle={t('blog.latest.subtitle') || ''}
                                 more_button_text={t('blog.latest.more_posts') || ''}
                                 more_button_link={NAVIGATION.blog.href}
                             />
-                            <Container
-                                fluid
-                                mb
-                            >
-                                {posts.map((post, index) => {
+                            <Container mb>
+                                {posts.slice(0, 3).map((post, index) => {
                                     return (
                                         <BlogCard
                                             post={post}
@@ -64,15 +60,12 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('projects.latest.title')}
-                                subtitle={t('projects.latest.subtitle')}
+                                subtitle={t('projects.latest.subtitle') || ''}
                                 more_button_text={t('projects.latest.more_posts') || ''}
                                 more_button_link={NAVIGATION.projects.href}
                             />
-                            <Container
-                                fluid
-                                mb
-                            >
-                                {projects_list(projects).map((project, index) => {
+                            <Container mb>
+                                {projects_list(projects).slice(0, 3).map((project, index) => {
                                     return (
                                         <ProjectCard
                                             project={project}
@@ -89,14 +82,11 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('resume.timeline.title')}
-                                subtitle={t('resume.timeline.subtitle')}
+                                subtitle={t('resume.timeline.subtitle') || ''}
                                 more_button_text={t('resume.view') || ''}
                                 more_button_link={NAVIGATION.resume.href}
                             />
-                            <Container
-                                fluid
-                                mb
-                            >
+                            <Container mb>
                                 {experiences.slice(0, 3).map((experience, index) => {
                                     return (
                                         <TimelineCard
@@ -128,7 +118,6 @@ export const getStaticProps = async (ctx: GetStaticPropsContext) => {
     const posts = getAllPosts(['title', 'excerpt', 'slug', 'date', 'coverImage', 'author', 'readingTime', 'tags', 'category']);
     const fetchRepos = await fetch(GITHUB_LINK);
     const projects = await fetchRepos.json();
-
 
     return {
         props: {
