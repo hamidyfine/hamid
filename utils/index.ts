@@ -1,5 +1,20 @@
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import { TProject } from '@/types';
 import { IGNORED_PROJECTS } from './constants';
+
+dayjs.extend(relativeTime);
+
+export const capitalize = (str: string) => str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+export const format_date = (date?: string) => date ? dayjs(date).format('DD MMMM YYYY') : '';
+
+export const relative_date = (date?: string, should_capitalize?: boolean) => {
+    if (!date) return '';
+    const d = dayjs(date).fromNow();
+    if (should_capitalize) return capitalize(d);
+    return d;
+};
 
 export const sort_projects_by_date = (projects: TProject[]) => {
     return projects.sort((a: TProject, b: TProject) => new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime()).reverse();

@@ -1,34 +1,22 @@
 import { TPost } from '@/types';
-import { Dot } from '@icon-park/react';
+import classNames from 'classnames';
 import Link from 'next/link';
+import { format_date } from '@/utils';
 
 type TProps = {
     post: TPost,
+    is_last_post?: boolean,
 };
 
-const BlogCard = ({ post }: TProps) => {
+const BlogCard = ({ post, is_last_post }: TProps) => {
     return (
-        <div className="mb-8 rounded-md transition-all">
-            <h2 className="text-lg hover:underline hover:text-purple-600">
+        <div className={classNames('mb-8', { 'pb-8 border-b-2': !is_last_post })}>
+            <span className="text-gray-400 text-sm mb-1 block">{format_date(post.date)}</span>
+            <h2 className="text-lg hover:underline hover:text-purple-600 mb-1">
                 <Link href={`/blog/${post.slug}`}>
                     {post.title}
                 </Link>
             </h2>
-            <div className="text-gray-400 text-xs flex items-center justify-start my-1 cursor-default">
-                <span className="capitalize">
-                    {post.category}
-                </span>
-                <Dot
-                    theme="outline"
-                    className="mx-2"
-                />
-                {post.date}
-                <Dot
-                    theme="outline"
-                    className="mx-2"
-                />
-                {post.readingTime}
-            </div>
             <p className="text-black text-base font-light mb-2 leading-relaxed cursor-default">
                 {post.excerpt}
             </p>

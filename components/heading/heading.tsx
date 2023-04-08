@@ -12,7 +12,7 @@ const Heading = ({ title, subtitle, more_button_text, more_button_link }: TProps
     return (
         <div className="flex items-center justify-between mb-8">
             <div>
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-medium text-4xl">
                     {title}
                 </h3>
                 <p className="text-gray-500 text-sm">

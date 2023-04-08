@@ -26,6 +26,7 @@
     "projects": {
         "page-title": "Hamid Yaftian | Front-end Developer | Projects",
         "title": "Projects",
+        "updated": "Updated ",
         "latest": {
             "title": "Latest Projects",
             "subtitle": "Here are some of my latest projects. You can also check out my project archive.",

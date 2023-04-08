@@ -7,9 +7,10 @@ type TProps = {
     slug: string;
     item: TSocialItem;
     className?: string;
+    show_label?: boolean;
 };
 
-const SocialLink = ({ item, slug, className }: TProps) => {
+const SocialLink = ({ item, slug, className, show_label }: TProps) => {
     const { t } = useTranslation(['button']);
 
     return (
@@ -18,9 +19,11 @@ const SocialLink = ({ item, slug, className }: TProps) => {
             className={classNames('flex items-center justify-center w-10 h-10 transition-all rounded-md', className)}
         >
             {item.icon}
-            <span className="ml-1">
-                {t(`social.${slug}`)}
-            </span>
+            {show_label && (
+                <span className="ml-1">
+                    {t(`social.${slug}`)}
+                </span>
+            )}
         </Link>
     );
 };

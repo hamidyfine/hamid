@@ -36,7 +36,6 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('blog.latest.title')}
-                                subtitle={t('blog.latest.subtitle') || ''}
                                 more_button_text={t('blog.latest.more_posts') || ''}
                                 more_button_link={NAVIGATION.blog.href}
                             />
@@ -46,6 +45,7 @@ const Home = ({ posts, projects }: TProps) => {
                                         <BlogCard
                                             post={post}
                                             key={index}
+                                            is_last_post={index === posts.slice(0, 3).length - 1}
                                         />
                                     );
                                 })}
@@ -58,19 +58,20 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('projects.latest.title')}
-                                subtitle={t('projects.latest.subtitle') || ''}
                                 more_button_text={t('projects.latest.more_posts') || ''}
                                 more_button_link={NAVIGATION.projects.href}
                             />
                             <Container mb>
-                                {projects_list(projects).slice(0, 3).map((project, index) => {
-                                    return (
-                                        <ProjectCard
-                                            project={project}
-                                            key={index}
-                                        />
-                                    );
-                                })}
+                                <div className="grid grid-cols-2 gap-4">
+                                    {projects_list(projects).slice(0, 4).map((project, index) => {
+                                        return (
+                                            <ProjectCard
+                                                project={project}
+                                                key={index}
+                                            />
+                                        );
+                                    })}
+                                </div>
                             </Container>
                         </>
                     )}
@@ -80,7 +81,6 @@ const Home = ({ posts, projects }: TProps) => {
                         <>
                             <Heading
                                 title={t('resume.timeline.title')}
-                                subtitle={t('resume.timeline.subtitle') || ''}
                                 more_button_text={t('resume.view_all_experience') || ''}
                                 more_button_link={NAVIGATION.resume.href}
                             />

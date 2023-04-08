@@ -1,5 +1,5 @@
 import { TProject } from '@/types';
-import { format_project_title, is_template_project } from '@/utils';
+import { format_project_title, is_template_project, relative_date } from '@/utils';
 import { Calendar, Github } from '@icon-park/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
@@ -34,7 +34,8 @@ const ProjectCard = ({ project }: TProps) => {
                         className="mr-1"
                         theme="outline"
                     />
-                    {new Date(project.updated_at).getFullYear()}
+                    {t('projects.updated')}
+                    {relative_date(project.pushed_at)}
                 </div>
                 <div>
                     <Link
@@ -54,11 +55,11 @@ const ProjectCard = ({ project }: TProps) => {
             <p className="text-black text-base font-light mb-2 leading-relaxed cursor-default">
                 {project.description}
             </p>
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-start flex-wrap">
                 {project.topics?.map((topic) => {
                     return (
                         <span
-                            className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 capitalize cursor-default"
+                            className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 mb-2 capitalize cursor-default"
                             key={topic}
                         >
                             {topic}
