@@ -17,7 +17,7 @@ export const relative_date = (date?: string, should_capitalize?: boolean) => {
 };
 
 export const sort_projects_by_date = (projects: TProject[]) => {
-    return projects.sort((a: TProject, b: TProject) => new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime()).reverse();
+    return projects.sort((a: TProject, b: TProject) => new Date(a.pushed_at).getTime() - new Date(b.pushed_at).getTime()).reverse();
 };
 
 export const format_project_title = (input: string): string => {
