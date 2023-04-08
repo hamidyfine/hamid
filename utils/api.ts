@@ -13,7 +13,7 @@ const postsDirectory = join(process.cwd(), 'posts');
  * @param fields fields to return
  * @returns post
  */
-export const getContentBySlug = (slug: string, fields: TFields[] = [], dir: 'posts' | 'content' = 'posts') => {
+export const getContentBySlug = (slug: any, fields: TFields[] = [], dir: 'posts' | 'content' = 'posts') => {
     const directory = dir === 'posts' ? postsDirectory : contentDirectory;
     const realSlug = slug.replace(/\.md$/, '');
     const fullPath = join(directory, `${realSlug}.md`);
@@ -45,7 +45,8 @@ export const getContentBySlug = (slug: string, fields: TFields[] = [], dir: 'pos
  * @returns {string[]}
  */
 export const getPostSlugs = (): string[] => {
-    return fs.readdirSync(postsDirectory);
+    const slugs = fs.readdirSync(postsDirectory).map((file) => file.replace(/\.md$/, ''));
+    return slugs;
 };
 
 /**

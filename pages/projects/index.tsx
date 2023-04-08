@@ -24,7 +24,10 @@ const Projects = ({ projects }: TProps) => {
             <main>
                 {projects_list(projects).length > 0 && (
                     <Container>
-                        <Heading title={t('projects.title')} />
+                        <Heading
+                            title={t('projects.title')}
+                            is_large
+                        />
                         <Container
                             fluid
                             mb

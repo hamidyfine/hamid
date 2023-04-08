@@ -21,7 +21,7 @@ const ContactCTA = () => {
                 <div className="flex items-center justify-start">
                     <Link
                         className="flex items-center justify-center text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md mr-2"
-                        href="/"
+                        href="/HamidYaftianResume.pdf"
                     >
                         <DownloadOne
                             theme="outline"

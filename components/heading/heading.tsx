@@ -1,23 +1,30 @@
 import { ArrowRight } from '@icon-park/react';
+import classNames from 'classnames';
 import Link from 'next/link';
 
 type TProps = {
-    title: string;
-    subtitle?: string;
-    more_button_text?: string;
+    className?: string;
+    has_default_mb?: boolean;
+    is_large?: boolean;
+    is_small?: boolean;
     more_button_link?: string;
+    more_button_text?: string;
+    subtitle?: string;
+    title: string;
 };
 
-const Heading = ({ title, subtitle, more_button_text, more_button_link }: TProps) => {
+const Heading = ({ title, subtitle, more_button_text, more_button_link, is_large, is_small, className, has_default_mb = true }: TProps) => {
     return (
-        <div className="flex items-center justify-between mb-8">
+        <div className={classNames('flex items-center justify-between', className, { 'mb-8': has_default_mb })}>
             <div>
-                <h3 className="font-medium text-4xl">
+                <h3 className={classNames('font-medium', { 'text-6xl py-14': is_large, 'text-2xl': is_small, 'text-4xl': !is_large && !is_small })}>
                     {title}
                 </h3>
-                <p className="text-gray-500 text-sm">
-                    {subtitle}
-                </p>
+                {subtitle && (
+                    <p className="text-gray-500 text-sm">
+                        {subtitle}
+                    </p>
+                )}
             </div>
 
             {more_button_text && more_button_link && (

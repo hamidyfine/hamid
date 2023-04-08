@@ -23,7 +23,10 @@ const Blog = ({ posts }: TProps) => {
             <main>
                 {posts.length > 0 && (
                     <Container>
-                        <Heading title={t('blog.title')} />
+                        <Heading
+                            title={t('blog.title')}
+                            is_large
+                        />
                         <Container mb>
                             {posts.map((post, index) => {
                                 return (

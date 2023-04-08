@@ -28,7 +28,10 @@ const Resume = ({ projects }: TProps) => {
                 {/* About */}
                 <Container mb>
                     <>
-                        <Heading title={t('resume.about.title')} />
+                        <Heading
+                            title={t('resume.about.title')}
+                            is_large
+                        />
                         <p className="text-xl font-light leading-relaxed">{resume.about}</p>
                     </>
                 </Container>
@@ -37,7 +40,10 @@ const Resume = ({ projects }: TProps) => {
                 <Container mb>
                     {resume.skills.length && (
                         <>
-                            <Heading title={t('resume.skills.title')} />
+                            <Heading
+                                title={t('resume.skills.title')}
+                                is_small
+                            />
                             <div className="flex items-center justify-start flex-wrap">
                                 {resume.skills.map((skill, index) => {
                                     return (
@@ -59,7 +65,7 @@ const Resume = ({ projects }: TProps) => {
                     <>
                         <Heading
                             title={t('resume.timeline.title')}
-                            subtitle={t('resume.timeline.subtitle') || ''}
+                            is_small
                         />
                         <Container mb>
                             {resume.experiences.map((experience, index) => {
@@ -78,7 +84,10 @@ const Resume = ({ projects }: TProps) => {
                 {/* Projects */}
                 {projects_list(projects).length > 0 && (
                     <Container>
-                        <Heading title={t('projects.title')} />
+                        <Heading
+                            title={t('projects.title')}
+                            is_small
+                        />
                         <Container
                             fluid
                             mb
@@ -98,7 +107,10 @@ const Resume = ({ projects }: TProps) => {
                 {/* Languages */}
                 {resume.languages.length && (
                     <Container mb>
-                        <Heading title={t('resume.languages.title')} />
+                        <Heading
+                            title={t('resume.languages.title')}
+                            is_small
+                        />
                         <div className="flex items-center justify-start">
                             {resume.languages.map((language, index) => {
                                 return (
