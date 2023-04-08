@@ -6,10 +6,10 @@ import { format_date } from '@/utils';
 import { getPostSlugs } from '@/utils/api';
 import { getContentBySlug } from '@/utils/api';
 import { BLOG_POST_TITLE_PREFIX } from '@/utils/constants';
+import classNames from 'classnames';
 import { GetStaticPaths, GetStaticPropsContext } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import Image from 'next/image';
 
 type TProps = {
     post: TPost,
@@ -21,33 +21,56 @@ const Post = ({ post }: TProps) => {
             <Head>
                 <title>{`${post.title}${BLOG_POST_TITLE_PREFIX}`}</title>
             </Head>
-            
-            <Image
-                src={post.coverImage!}
-                alt={post.title!}
-                width={2000}
-                height={600}
-                className="max-w-full block"
-            />
+
+            <div
+                style={{ backgroundImage: `url(${post.coverImage})` }}
+                className="flex items-center justify-center max-w-full h-96 bg-cover bg-center bg-no-repeat bg-blue-500 mb-12"
+            >
+                {!post.coverImage && (
+                    <div className="flex flex-col items-center justify-start">
+                        <span className="text-white block">{format_date(post.date)}</span>
+                        <h1 className="text-5xl font-medium text-white leading-relaxed mb-2">
+                            {post.title}
+                        </h1>
+                        <div className="flex items-center justify-start">
+                            {post.tags?.split(',').map((tag, index) => {
+                                return (
+                                    <span
+                                        className={classNames('bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs capitalize cursor-default', { 'mr-2': post.tags && index !== post.tags?.split(',').length - 1 })}
+                                        key={index}
+                                    >
+                                        {tag}
+                                    </span>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+            </div>
+
             <Container>
-                <span className="text-gray-400 text-sm mb-2 block mt-12">{format_date(post.date)}</span>
-                <Heading
-                    title={post.title!}
-                    className="mb-4"
-                    has_default_mb={false}
-                />
-                <div className="flex items-center justify-start mb-12">
-                    {post.tags?.split(',').map((tag) => {
-                        return (
-                            <span
-                                className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 capitalize cursor-default"
-                                key={tag}
-                            >
-                                {tag}
-                            </span>
-                        );
-                    })}
-                </div>
+                {post.coverImage && (
+                    <>
+                        <span className="text-gray-400 text-sm mb-2 block mt-12">{format_date(post.date)}</span>
+                        <Heading
+                            title={post.title!}
+                            className="mb-4"
+                            has_default_mb={false}
+                        />
+                        <div className="flex items-center justify-start mb-12">
+                            {post.tags?.split(',').map((tag) => {
+                                return (
+                                    <span
+                                        className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 capitalize cursor-default"
+                                        key={tag}
+                                    >
+                                        {tag}
+                                    </span>
+                                );
+                            })}
+                        </div>
+                    </>
+                )}
                 <MarkdownContent
                     content={post.content}
                     className="mb-10"
