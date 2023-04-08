@@ -1,4 +1,35 @@
-import { TExperience } from '@/types';
+import { TExperience, TLanguages } from '@/types';
+
+// eslint-disable-next-line max-len
+export const about: string = 'With over 10 years of experience, highly skilled JavaScript Developer specializing in working with JavaScript, React, and Vue.js, and proficient in TypeScript. Prioritizing high-quality code writing and thoroughly testing every line of code is crucial. The eagerness to learn and belief in constantly improving skills is always emphasized. Due to extensive experience, knowledge, and passion for coding, confident in adding value to any development project achieved.';
+
+export const skills: string[] = [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Vue.js',
+    'Nuxt',
+    'Jest',
+    'MobX',
+    'Redux',
+    'Vuex',
+    'Vuetify',
+    'MUI',
+    'SCSS',
+    'HTML',
+    'CSS',
+];
+
+export const languages: TLanguages[] = [
+    {
+        name : 'Persian',
+        level: 'Native',
+    },
+    {
+        name : 'English',
+        level: 'Fluent',
+    },
+];
 
 export const experiences: TExperience[] = [
     {

@@ -150,3 +150,8 @@ export type TExperience = {
     stack: string[];
     description: string[];
 };
+
+export type TLanguages = {
+    name: string;
+    level: string;
+};

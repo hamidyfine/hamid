@@ -13,8 +13,6 @@ import ProjectCard from '@/components/project-card';
 import { projects_list } from '@/utils';
 import TimelineCard from '@/components/timeline-card';
 import { experiences } from '@/data/resume';
-import Link from 'next/link';
-import { ArrowRight } from '@icon-park/react';
 
 type TProps = {
     posts: TPost[],
@@ -83,7 +81,7 @@ const Home = ({ posts, projects }: TProps) => {
                             <Heading
                                 title={t('resume.timeline.title')}
                                 subtitle={t('resume.timeline.subtitle') || ''}
-                                more_button_text={t('resume.view') || ''}
+                                more_button_text={t('resume.view_all_experience') || ''}
                                 more_button_link={NAVIGATION.resume.href}
                             />
                             <Container mb>
@@ -95,16 +93,6 @@ const Home = ({ posts, projects }: TProps) => {
                                         />
                                     );
                                 })}
-
-                                <Link href={NAVIGATION.resume.href}>
-                                    <div className="flex items-center justify-center bg-gray-100 rounded-md text-sm transition-all hover:bg-purple-500 hover:text-white p-2 cursor-pointer">
-                                        {t('resume.view_all_experience')}
-                                        <ArrowRight
-                                            className="ml-1 relative top-px"
-                                            theme="outline"
-                                        />
-                                    </div>
-                                </Link>
                             </Container>
                         </>
                     )}

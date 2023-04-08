@@ -30,14 +30,30 @@
             "title": "Latest Projects",
             "subtitle": "Here are some of my latest projects. You can also check out my project archive.",
             "more_posts": "More Projects"
+        },
+        "templates": {
+            "title": "Template",
+            "subtitle": "Templates are the starter kit includes all you need to build amazing projects",
+            "more_posts": "More Templates",
+            "is_template": "starter-kit"
         }
     },
     "resume": {
+        "page-title": "Hamid Yaftian | Front-end Developer | Resume",
         "title": "Resume",
         "subtitle": "Here is my resume. You can also download it in PDF format.",
         "download": "Download PDF",
         "view": "About me",
         "view_all_experience": "View Full Timeline",
+        "about": {
+            "title": "About me"
+        },
+        "skills": {
+            "title": "Skills"
+        },
+        "languages": {
+            "title": "Languages"
+        },
         "timeline": {
             "title": "Timeline",
             "subtitle": ""
