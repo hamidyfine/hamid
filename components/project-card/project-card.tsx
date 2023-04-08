@@ -1,6 +1,6 @@
 import { TProject } from '@/types';
 import { format_project_title, is_template_project } from '@/utils';
-import { Calendar, Dot, Github } from '@icon-park/react';
+import { Calendar, Github } from '@icon-park/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 

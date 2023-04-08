@@ -18,9 +18,9 @@ const SocialLink = ({ item, slug, className }: TProps) => {
             className={classNames('flex items-center justify-center w-10 h-10 transition-all rounded-md', className)}
         >
             {item.icon}
-            {/* <span className="ml-1">
+            <span className="ml-1">
                 {t(`social.${slug}`)}
-            </span> */}
+            </span>
         </Link>
     );
 };
