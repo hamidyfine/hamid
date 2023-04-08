@@ -12,7 +12,7 @@ const MarkdownContent = ({ content, className }: Props) => {
 
     return (
         <div
-            className={classNames('prose w-100 mx-0 max-w-full', className)}
+            className={classNames('prose prose-neutral prose-p:mb-0 prose-p:mt-0 hover:prose-a:text-purple-500 w-100 mx-0 max-w-full', className)}
             dangerouslySetInnerHTML={{ __html: content }}
         />
     );

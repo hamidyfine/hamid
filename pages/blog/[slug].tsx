@@ -24,7 +24,7 @@ const Post = ({ post }: TProps) => {
 
             <div
                 style={{ backgroundImage: `url(${post.coverImage})` }}
-                className="flex items-center justify-center max-w-full h-96 bg-cover bg-center bg-no-repeat bg-blue-500 mb-12"
+                className="flex items-center justify-center max-w-full h-96 bg-cover bg-center bg-no-repeat bg-purple-900 mb-12"
             >
                 {!post.coverImage && (
                     <div className="flex flex-col items-center justify-start">
