@@ -7,12 +7,13 @@ export type TNavigation = {
     [k: string]: TNavItem;
 };
 
-export type TFields = 'slug' | 'title' | 'date' | 'content' | 'excerpt' | 'coverImage' | 'ogImage' | 'author' | 'tags' | 'category' | 'readingTime';
+export type TFields = 'slug' | 'title' | 'date' | 'content' | 'excerpt' | 'coverImage' | 'ogImage' | 'author' | 'tags' | 'category' | 'readingTime' | 'update';
 
 export type TPost = {
     slug: string;
     title?: string;
     date?: string;
+    update?: string;
     content?: string;
     excerpt?: string;
     coverImage?: string;

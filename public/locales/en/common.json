@@ -17,6 +17,7 @@
     "blog": {
         "page-title": "Hamid Yaftian | Front-end Developer | Blog",
         "title": "Blog",
+        "updated": "This post is updated at ",
         "latest": {
             "title": "Latest Posts",
             "subtitle": "Here are some of my latest posts. You can also check out my blog archive.",

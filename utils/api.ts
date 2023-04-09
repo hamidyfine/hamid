@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import markdownToHtml from './markdownToHtml';
 import type { TFields, TPost } from '@/types';
 
 const contentDirectory = join(process.cwd(), 'public/content');
@@ -26,9 +25,7 @@ export const getContentBySlug = (slug: any, fields: TFields[] = [], dir: 'posts'
 
     fields.forEach((field) => {
         if (field === 'content') {
-            markdownToHtml(content).then((html) => {
-                items[field] = html;
-            });
+            items[field] = content;
         }
 
         if (typeof data[field] !== 'undefined') {
