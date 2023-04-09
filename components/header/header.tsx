@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { NAVIGATION } from '@/utils/constants';
 import Container from '../container';
-import Image from 'next/image';
 // import DarkModeSwitcher from '../dark-mode-switcher';
 // import LocaleSwitcher from '../locale-switcher';
 
@@ -28,13 +27,9 @@ const AppHeader = () => {
             <Container>
                 <div className="flex items-center justify-between">
                     <Link href="/">
-                        <Image
-                            alt="Hamid Website"
-                            src="/h-logo.png"
-                            className="rounded-full"
-                            width={50}
-                            height={50}
-                        />
+                        <h1 className="font-logo text-2xl transition-all hover:text-purple-500">
+                            {'<Hamid />'}
+                        </h1>
                     </Link>
 
                     <nav>

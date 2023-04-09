@@ -37,27 +37,19 @@ const MarkdownContent = ({ content, className }: TProps) => {
     }
 
     const MarkdownComponents: object = {
-        code({ node, className, ...props }: TMarkdownComponentsProps) {
+        // eslint-disable-next-line no-unused-vars
+        code({ node, inline, className, ...props }: TMarkdownComponentsProps) {
             const hasLang = /language-(\w+)/.exec(className || '');
             const hasMeta = node?.data?.meta;
 
             const applyHighlights: object = (applyHighlights: number) => {
                 if (hasMeta) {
-                    const result = {
-                        data : '',
-                        class: '',
-                    };
                     const RE = /{([\d,-]+)}/;
                     const metadata = node.data.meta?.replace(/\s/g, '');
                     const strLineNumbers = RE?.test(metadata) ? RE?.exec(metadata)![1] : '0';
                     const highlightLines = rangeParser(strLineNumbers);
-                    if (highlightLines.includes(applyHighlights)) {
-                        result['data'] = 'highlight2222';
-                        result['class'] = 'block bg-zinc-700';
-                    } else {
-                        result['class'] = 'block';
-                    }
-                    return result;
+                    const data: string | null = highlightLines.includes(applyHighlights) ? 'highlight' : null;
+                    return { data };
                 } else {
                     return {};
                 }

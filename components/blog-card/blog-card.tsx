@@ -21,11 +21,11 @@ const BlogCard = ({ post, is_last_post }: TProps) => {
                 {post.excerpt}
             </p>
             <div className="flex items-center justify-start">
-                {post.tags?.split(',').map((tag) => {
+                {post.tags?.split(',').map((tag, index) => {
                     return (
                         <span
                             className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 capitalize cursor-default"
-                            key={tag}
+                            key={index}
                         >
                             {tag}
                         </span>

@@ -8,7 +8,8 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'sans': ['\'Ubuntu\', sans-serif', 'system-ui']
+            'sans': ['\'Ubuntu\', sans-serif', 'system-ui'],
+            'logo': ['\'Pacifico\', cursive'],
         },
         container: {
             screens: {
