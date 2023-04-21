@@ -1,5 +1,5 @@
 import { TProject } from '@/types';
-import { format_project_title, is_template_project, relative_date } from '@/utils';
+import { is_template_project, relative_date } from '@/utils';
 import { Calendar, Github } from '@icon-park/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: TProps) => {
                         href={project.html_url}
                         target="_blank"
                     >
-                        {format_project_title(project.name)}
+                        {project.name}
                     </Link>
                 </h2>
                 {is_template_project(project) && (

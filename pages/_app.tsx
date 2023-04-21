@@ -20,10 +20,12 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
       
             <AppHeader />
-            <Component
-                className="min-h-screen"
-                {...pageProps}
-            />
+            <div style={{minHeight: 'calc(100vh - 96px - 292px - 48px)'}}>
+                <Component
+                    className="min-h-screen"
+                    {...pageProps}
+                />
+            </div>
             <ContactCTA />
             <AppFooter />
         </IconProvider>

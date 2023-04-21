@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import SocialLink from '../social-link';
 import { DownloadOne } from '@icon-park/react';
+import { NAVIGATION } from '@/utils/constants';
 import Container from '../container/container';
 
 const ContactCTA = () => {
@@ -21,7 +22,7 @@ const ContactCTA = () => {
                 <div className="flex items-center justify-start">
                     <Link
                         className="flex items-center justify-center text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md mr-2"
-                        href="/HamidYaftianResume.pdf"
+                        href="/Hamid_Yaftian_Resume.pdf"
                     >
                         <DownloadOne
                             theme="outline"
@@ -33,7 +34,7 @@ const ContactCTA = () => {
                     </Link>
                     <Link
                         className="text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md"
-                        href="/"
+                        href={NAVIGATION.contact.href}
                     >
                         {t('contact', { ns: 'button' })}
                     </Link>
