@@ -45,7 +45,7 @@ const Blog = ({ posts }: TProps) => {
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-    const posts = getAllPosts(['title', 'excerpt', 'slug', 'date', 'coverImage', 'author', 'readingTime', 'tags', 'category']);
+    const posts = getAllPosts(['title', 'excerpt', 'slug', 'date', 'coverImage', 'author', 'readingTime', 'tags', 'category'], 'date');
 
     return {
         props: {
