@@ -103,7 +103,7 @@ const Home = ({ posts, projects }: TProps) => {
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-    const posts = getAllPosts(['title', 'excerpt', 'slug', 'date', 'coverImage', 'author', 'readingTime', 'tags', 'category']);
+    const posts = getAllPosts(['title', 'excerpt', 'slug', 'date', 'coverImage', 'author', 'readingTime', 'tags', 'category'], 'date');
     const fetchRepos = await fetch(GITHUB_LINK);
     const projects = await fetchRepos.json();
 

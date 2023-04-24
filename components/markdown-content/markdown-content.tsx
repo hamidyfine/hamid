@@ -78,7 +78,7 @@ const MarkdownContent = ({ content, className }: TProps) => {
 
     return (
         <ReactMarkdown
-            className={classNames('prose prose-neutral prose-p:mb-0 prose-p:mt-0 hover:prose-a:text-purple-500 w-100 mx-0 max-w-full prose-pre:bg-inherit prose-pre:p-0', className)}
+            className={classNames('prose prose-neutral prose-p:mb-3 prose-p:mt-0 prose-img:mx-auto prose-img:my-2 hover:prose-a:text-purple-500 w-100 mx-0 max-w-full prose-pre:bg-inherit prose-pre:p-0', className)}
             components={MarkdownComponents}
         >
             {content}

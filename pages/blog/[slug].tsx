@@ -88,7 +88,7 @@ const Post = ({ post }: TProps) => {
 
                 <MarkdownContent
                     content={post.content}
-                    className="mb-10"
+                    className="mb-16 pb-16 border-b-2"
                 />
             </Container>
         </>
