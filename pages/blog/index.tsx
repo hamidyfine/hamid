@@ -22,7 +22,7 @@ const Blog = ({ posts }: TProps) => {
             </Head>
             <main>
                 {posts.length > 0 && (
-                    <Container>
+                    <Container root>
                         <Heading
                             title={t('blog.title')}
                             is_large

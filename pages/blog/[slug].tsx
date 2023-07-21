@@ -29,7 +29,7 @@ const Post = ({ post }: TProps) => {
                 style={{ backgroundImage: `url(${post.coverImage})` }}
                 className="flex items-center justify-center text-center max-w-full h-96 bg-cover bg-center bg-no-repeat bg-purple-900 mb-12"
             >
-                <Container>
+                <Container root>
                     {!post.coverImage && (
                         <div className="flex flex-col items-center justify-start">
                             <span className="text-white block">{format_date(post.date)}</span>
@@ -53,7 +53,7 @@ const Post = ({ post }: TProps) => {
                 </Container>
             </div>
 
-            <Container>
+            <Container root>
                 {post.coverImage && (
                     <>
                         <span className="text-gray-400 text-sm mb-2 block mt-12">{format_date(post.date)}</span>

@@ -11,15 +11,15 @@ const ContactCTA = () => {
     const socialKeys = Object.keys(SOCIAL);
     
     return (
-        <Container className="border-purple-600 border-4 p-10 rounded-md">
+        <Container className="border-purple-600 border-4 p-10 rounded-md mx-8 w-fit">
             <h2 className="text-4xl font-bold mb-4">
                 {t('contact.cta.title')}
             </h2>
             <p className="mb-6 leading-relaxed">
                 {t('contact.cta.body')}
             </p>
-            <div className="flex items-center justify-between">
-                <div className="flex items-center justify-start">
+            <div className="block md:flex items-center justify-between">
+                <div className="flex items-center justify-center md:justify-start mb-4 md:mb-0">
                     <Link
                         className="flex items-center justify-center text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md mr-2"
                         href="/Hamid_Yaftian_Resume.pdf"
@@ -40,7 +40,7 @@ const ContactCTA = () => {
                     </Link>
                 </div>
 
-                <div className="flex items-center justify-start">
+                <div className="flex items-center justify-center md:justify-start">
                     {socialKeys.map((key) => {
                         if (SOCIAL[key].href) {
                             return (

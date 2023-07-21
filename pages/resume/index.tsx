@@ -24,7 +24,7 @@ const Resume = ({ projects }: TProps) => {
                 <title>{t('blog.page-title')}</title>
             </Head>
 
-            <Container>
+            <Container root>
                 {/* About */}
                 <Container mb>
                     <>

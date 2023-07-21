@@ -23,7 +23,7 @@ const Projects = ({ projects }: TProps) => {
             </Head>
             <main>
                 {projects_list(projects).length > 0 && (
-                    <Container>
+                    <Container root>
                         <Heading
                             title={t('projects.title')}
                             is_large

@@ -22,12 +22,12 @@ const App = ({ Component, pageProps }: AppProps) => {
             <Head>
                 <meta
                     name="viewport"
-                    content="viewport-fit=cover"
+                    content="width=device-width, initial-scale=1.0"
                 />
             </Head>
       
             <AppHeader />
-            <div style={{minHeight: 'calc(100vh - 96px - 292px - 48px)'}}>
+            <div>
                 <Component
                     className="min-h-screen"
                     {...pageProps}

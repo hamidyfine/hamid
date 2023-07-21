@@ -28,7 +28,7 @@ const Home = ({ posts, projects }: TProps) => {
                 <title>{t('home.page-title')}</title>
             </Head>
             <main>
-                <Container>
+                <Container root>
                     <Intro />
 
                     {/* Latest Blog Items */}
@@ -62,7 +62,7 @@ const Home = ({ posts, projects }: TProps) => {
                                 more_button_link={NAVIGATION.projects.href}
                             />
                             <Container mb>
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {projects_list(projects).slice(0, 4).map((project, index) => {
                                         return (
                                             <ProjectCard

@@ -9,7 +9,7 @@ type TProps = {
 const TimelineCard = ({ experience, show_description }: TProps) => {
     return (
         <div className="mb-8">
-            <div className="flex items-start justify-between">
+            <div className="md:flex items-start justify-between">
                 <div>
                     <div className="flex items-center justify-start mb-1">
                         <p className="font-medium text-lg">{experience.title}</p>
@@ -34,11 +34,11 @@ const TimelineCard = ({ experience, show_description }: TProps) => {
                             </span>
                         </div>
 
-                        <div className="flex items-center justify-start mb-2">
+                        <div className="block md:flex items-center justify-start mb-2">
                             {experience.stack.map((slug, index) => {
                                 return (
                                     <span
-                                        className="bg-gray-100 py-1 px-2 rounded-md text-gray-600 text-xs mr-2 capitalize cursor-default"
+                                        className="inline-block bg-gray-100 py-1 px-2 w-fit rounded-md text-gray-600 text-xs mr-2 mb-2 capitalize cursor-default"
                                         key={index}
                                     >
                                         {slug}
@@ -49,7 +49,7 @@ const TimelineCard = ({ experience, show_description }: TProps) => {
                     </div>
                 </div>
 
-                <div className="">
+                <div className="hidden md:block">
                     <div className="flex items-center justify-end mb-1">
                         <span className="text-sm text-gray-500">{experience.start_date} - </span>
                         <span className="text-sm text-gray-500 ml-1">{experience.end_date}</span>

@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 const Intro = () => {
     const { t } = useTranslation('common');
     return (
-        <div className="py-24">
+        <div className="py-12 md:py-24">
             <p className="text-2xl mb-4 font-light">
                 {t('home.intro.title')}
             </p>

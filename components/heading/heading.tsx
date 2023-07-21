@@ -15,7 +15,7 @@ type TProps = {
 
 const Heading = ({ title, subtitle, more_button_text, more_button_link, is_large, is_small, className, has_default_mb = true }: TProps) => {
     return (
-        <div className={classNames('flex items-center justify-between', className, { 'mb-8': has_default_mb })}>
+        <div className={classNames('block md:flex items-center justify-between', className, { 'mb-8': has_default_mb })}>
             <div>
                 <h3 className={classNames('font-medium', { 'text-6xl py-14': is_large, 'text-2xl': is_small, 'text-4xl': !is_large && !is_small })}>
                     {title}
@@ -30,7 +30,7 @@ const Heading = ({ title, subtitle, more_button_text, more_button_link, is_large
             {more_button_text && more_button_link && (
                 <div>
                     <Link
-                        className="flex items-center justify-end rounded-md text-sm  py-1 px-2 text-purple-600 transition-all hover:text-white hover:bg-purple-600"
+                        className="flex items-center justify-start md:justify-end rounded-md text-md md:text-sm py-2 md:py-1 md:px-2 text-purple-600 transition-all hover:text-white hover:bg-purple-600"
                         href={more_button_link}
                     >
                         {more_button_text}

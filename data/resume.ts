@@ -29,10 +29,6 @@ export const languages: TLanguages[] = [
         name : 'English',
         level: 'Fluent',
     },
-    {
-        name : 'German',
-        level: 'Beginner',
-    },
 ];
 
 export const experiences: TExperience[] = [
