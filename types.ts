@@ -152,7 +152,14 @@ export type TExperience = {
     description: string[];
 };
 
-export type TLanguages = {
+export type TLanguage = {
     name: string;
     level: string;
+};
+
+export type TCertificate = {
+    title: string;
+    link: string;
+    issue_date: string;
+    source: string;
 };

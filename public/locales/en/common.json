@@ -56,6 +56,9 @@
         "languages": {
             "title": "Languages"
         },
+        "certificates": {
+            "title": "Certificates"
+        },
         "timeline": {
             "title": "Timeline",
             "subtitle": ""

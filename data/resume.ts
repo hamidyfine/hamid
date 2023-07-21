@@ -1,4 +1,4 @@
-import { TExperience, TLanguages } from '@/types';
+import { TCertificate, TExperience, TLanguage } from '@/types';
 
 // eslint-disable-next-line max-len
 export const about: string = 'As a seasoned front-end developer with over 10 years of experience, I specialize in JavaScript, React, Vue.js, and TypeScript. I prioritize high-quality code and thorough testing, while also actively helping others and sharing my knowledge to contribute to a collaborative and productive team environment. I am always eager to learn and improve my skills, and I enjoy actively contributing to discussions to find innovative solutions and approaches to development challenges. With my extensive experience, passion for coding, and collaborative mindset, I am confident in adding significant value to any project I work on.';
@@ -20,7 +20,7 @@ export const skills: string[] = [
     'CSS',
 ];
 
-export const languages: TLanguages[] = [
+export const languages: TLanguage[] = [
     {
         name : 'Persian',
         level: 'Native',
@@ -28,6 +28,81 @@ export const languages: TLanguages[] = [
     {
         name : 'English',
         level: 'Fluent',
+    },
+];
+
+export const certificates: TCertificate[] = [
+    {
+        title     : 'Learning Bash Scripting',
+        link      : 'https://www.linkedin.com/learning/certificates/f8e2f84a382e4a3ee2f308eb921066994581c695e9218cd7b17e134ab0d02232?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'Learning Redux Toolkit',
+        link      : 'https://www.linkedin.com/learning/certificates/a81619dda2aeef7b0d8641c048e933794ef1414f79d372aeb31791697081ce9f?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'React Hooks',
+        link      : 'https://www.linkedin.com/learning/certificates/b62d1b921900ded0fa5a35614acf4ee7a90928e322743e16906525cf79fdc790?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'React.js Code Challenges',
+        link      : 'https://www.linkedin.com/learning/certificates/ab74322f9752a17490785d102424e63aeccf8231edf1c1b4d91540e4aa4d4cd9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3DD',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'React: Design Patterns',
+        link      : 'https://www.linkedin.com/learning/certificates/cc622e6fc3d7ae2144f106603a158f2e84e2bb278c0c9a2184434b3a79788e23?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'React: State Management',
+        link      : 'https://www.linkedin.com/learning/certificates/837e3535465dd8a6d29762f00fbe349486c285ef5a4e082f4105265b66cce6d1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'TypeScript Essential Training',
+        link      : 'https://www.linkedin.com/learning/certificates/8eb8d7efd200a1f350f83a31fdf20c299f0a2ea28a9cdc0804e74575b7600496?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'July 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'Agile: Scrum for Developers',
+        link      : 'https://www.linkedin.com/learning/certificates/309b24ef5dacb92cd9c705318f54d350cddc845e5f7e0fbe04303aef2cbc6c03?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'April 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'CSS Logical Properties',
+        link      : 'https://www.linkedin.com/learning/certificates/084fc6bbab4419abf65a92ad0e7f5cbd8118059fc252aa497223fd207f1bec67?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'April 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'React: Using TypeScript',
+        link      : 'https://www.linkedin.com/learning/certificates/00e18ea61faed330d5d2f6c4926758e8e05fec3981e585ed9b84b5a5e056c3cc?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'April 2023',
+        source    : 'LinkedIn Learning',
+    },
+    {
+        title     : 'Scrum: The Basics',
+        link      : 'https://www.linkedin.com/learning/certificates/aed5dc57b929805b43caa248d81659ed74d6c3a0596b2feeedeb45d63d8470a8?u=215525050&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'April 2023',
+        source    : 'Project Management Institute',
+    },
+    {
+        title     : 'Scrum: The Basics',
+        link      : 'https://www.linkedin.com/learning/certificates/2c998799a87239f648631c7c4a81e15d8f26e4f5be7e363ca2b7b4ee3a9b44d1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BiP01%2FNIWTnq4N7h8xIxheA%3D%3D',
+        issue_date: 'April 2023',
+        source    : 'LinkedIn Learning',
     },
 ];
 

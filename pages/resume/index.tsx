@@ -10,6 +10,7 @@ import { GetStaticPropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import Link from 'next/link';
 
 type TProps = {
     projects: TProject[],
@@ -101,6 +102,36 @@ const Resume = ({ projects }: TProps) => {
                                 );
                             })}
                         </Container>
+                    </Container>
+                )}
+
+                {/* Certificates */}
+                {resume.certificates.length && (
+                    <Container mb>
+                        <Heading
+                            title={t('resume.certificates.title')}
+                            is_small
+                        />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {resume.certificates.map((cert, index) => {
+                                return (
+                                    <div key={index}>
+                                        <h2 className="text-lg hover:underline hover:text-purple-600 mb-1">
+                                            <Link
+                                                href={cert.link}
+                                                target="_blank"
+                                            >
+                                                {cert.title}
+                                            </Link>
+                                        </h2>
+                                        <div className="block">
+                                            <span className="block text-xs text-gray-400 mb-1">{cert.source}</span>
+                                            <span className="block text-xs text-gray-400">{cert.issue_date}</span>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </Container>
                 )}
 
