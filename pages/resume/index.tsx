@@ -116,7 +116,7 @@ const Resume = ({ projects }: TProps) => {
                             {resume.certificates.map((cert, index) => {
                                 return (
                                     <div key={index}>
-                                        <h2 className="text-lg hover:underline hover:text-purple-600 mb-1">
+                                        <h2 className="text-lg hover:underline hover:text-purple-600 mb-1 cursor-pointer">
                                             <Link
                                                 href={cert.link}
                                                 target="_blank"
