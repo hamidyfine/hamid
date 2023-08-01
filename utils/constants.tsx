@@ -30,6 +30,10 @@ export const SOCIAL: TSocials = {
         href: 'https://github.com/hamidyfine',
         icon: <GithubOne theme="outline" size="18" />,
     },
+    deriv: {
+        href: 'https://github.com/hamid-deriv',
+        icon: <GithubOne theme="outline" size="18" />,
+    },
     linkedin: {
         href: 'https://www.linkedin.com/in/hamidyaftian/',
         icon: <InstagramOne theme="outline" size="18" />,
