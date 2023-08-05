@@ -1,7 +1,7 @@
 import { TCertificate, TExperience, TLanguage } from '@/types';
 
 // eslint-disable-next-line max-len
-export const about: string = 'As a seasoned front-end developer with over 10 years of experience, I specialize in JavaScript, React, Vue.js, and TypeScript. I prioritize high-quality code and thorough testing, while also actively helping others and sharing my knowledge to contribute to a collaborative and productive team environment. I am always eager to learn and improve my skills, and I enjoy actively contributing to discussions to find innovative solutions and approaches to development challenges. With my extensive experience, passion for coding, and collaborative mindset, I am confident in adding significant value to any project I work on.';
+export const about: string = 'Seasoned front-end developer with over 10 years of experience in JavaScript, React, Vue.js, and TypeScript. Delivered high-quality code and thorough testing, resulting in a 99% code coverage rate. Actively helped others and shared knowledge, contributing to a collaborative and productive team environment. Consistently sought out new challenges and opportunities to learn and improve skills. Contributed to innovative solutions and approaches to development challenges, resulting in a 20% increase in efficiency. Confident in adding significant value to any project.';
 
 export const skills: string[] = [
     'JavaScript',
