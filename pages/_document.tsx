@@ -11,6 +11,7 @@ const MyDocument = (props: TProps) => {
             lang={props.locale}
         >
             <Head>
+                <meta charSet="utf-8" />
                 <meta
                     name="title"
                     content="Hamid Yaftian | Frontend Developer"

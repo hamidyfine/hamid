@@ -4,14 +4,13 @@ import Link from 'next/link';
 import SocialLink from '../social-link';
 import { DownloadOne } from '@icon-park/react';
 import { NAVIGATION } from '@/utils/constants';
-import Container from '../container/container';
 
 const ContactCTA = () => {
     const { t } = useTranslation(['common', 'button']);
     const socialKeys = Object.keys(SOCIAL);
     
     return (
-        <Container className="border-purple-600 border-4 p-10 rounded-md mx-8 w-fit">
+        <div className="border-purple-600 border-4 p-10 rounded-md mx-4 md:mx-auto container w-fit">
             <h2 className="text-4xl font-bold mb-4">
                 {t('contact.cta.title')}
             </h2>
@@ -19,9 +18,9 @@ const ContactCTA = () => {
                 {t('contact.cta.body')}
             </p>
             <div className="block md:flex items-center justify-between">
-                <div className="flex items-center justify-center md:justify-start mb-4 md:mb-0">
+                <div className="flex items-center justify-center md:justify-start mb-4 md:mb-0 flex-col md:flex-row gap-2">
                     <Link
-                        className="flex items-center justify-center text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md mr-2"
+                        className="flex items-center justify-center text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md w-full md:w-auto"
                         href="/Hamid_Yaftian_Resume.pdf"
                     >
                         <DownloadOne
@@ -33,7 +32,7 @@ const ContactCTA = () => {
                         {t('resume.download', { ns: 'button' })}
                     </Link>
                     <Link
-                        className="text-white py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md"
+                        className="text-white text-center py-2 px-4 bg-purple-600 hover:bg-purple-800 transition-all rounded-md w-full md:w-auto"
                         href={NAVIGATION.contact.href}
                     >
                         {t('contact', { ns: 'button' })}
@@ -56,7 +55,7 @@ const ContactCTA = () => {
                     })}
                 </div>
             </div>
-        </Container>
+        </div>
     );
 };
 
