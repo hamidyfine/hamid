@@ -28,10 +28,10 @@ export const format_project_title = (input: string): string => {
 };
 
 export const should_show_project = (project: TProject) => {
-    return !project.fork && !project.archived && !project.disabled && !project.private && !IGNORED_PROJECTS.includes(project.name);
+    return !project.fork && !project.disabled && !project.private && !IGNORED_PROJECTS.includes(project.name);
 };
 
-export const is_template_project = (project: TProject) => project.topics?.includes('template');
+export const is_template_project = (project: TProject) => project.is_template;
 
 export const projects_list = (projects: TProject[]) => {
     return sort_projects_by_date(projects.filter((project) => should_show_project(project)));

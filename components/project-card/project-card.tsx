@@ -27,6 +27,11 @@ const ProjectCard = ({ project }: TProps) => {
                         {t('projects.templates.is_template')}
                     </span>
                 )}
+                {project.archived && (
+                    <span className="text-xs bg-red-400 px-1 py-0.5 rounded-md text-white">
+                        {t('projects.is_archived')}
+                    </span>
+                )}
             </div>
             <div className="text-gray-400 text-xs flex items-center justify-start my-1 cursor-default">
                 <div className="flex items-center justify-start mr-2">

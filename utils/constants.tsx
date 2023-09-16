@@ -4,7 +4,7 @@ import { GithubOne, InstagramOne, Twitter, EmailSuccessfully, Telegram } from '@
 
 export const GITHUB_LINK: string = 'https://api.github.com/users/hamidyfine/repos';
 export const BLOG_POST_TITLE_PREFIX: string = ' | Hamid Yaftian | Front-end Developer | Blog';
-export const IGNORED_PROJECTS: string[] = ['hamidyfine', 'vuex-issue', 'gatsby-starter-kit', 'gatsby-starter', 'nuxt-starter'];
+export const IGNORED_PROJECTS: string[] = ['hamidyfine', 'vuex-issue'];
 
 export const NAVIGATION: TNavigation = {
     blog: {
