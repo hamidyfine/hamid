@@ -33,7 +33,9 @@ const Resume = ({ projects }: TProps) => {
                             title={t('resume.about.title')}
                             is_large
                         />
-                        <p className="text-xl font-light leading-relaxed">{resume.about}</p>
+                        <p className="text-xl font-light leading-relaxed mb-4">{resume.about_1}</p>
+                        <p className="text-xl font-light leading-relaxed mb-4">{resume.about_2}</p>
+                        <p className="text-xl font-light leading-relaxed">{resume.about_3}</p>
                     </>
                 </Container>
 
@@ -94,6 +96,8 @@ const Resume = ({ projects }: TProps) => {
                             mb
                         >
                             {projects_list(projects).map((project, index) => {
+                                if (project.archived) return null;
+
                                 return (
                                     <ProjectCard
                                         project={project}

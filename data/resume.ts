@@ -1,20 +1,27 @@
+/* eslint-disable max-len */
 import { TCertificate, TExperience, TLanguage } from '@/types';
 
 // eslint-disable-next-line max-len
-export const about: string = 'Seasoned front-end developer with over 10 years of experience in JavaScript, React, Vue.js, and TypeScript. Delivered high-quality code and thorough testing, resulting in a 99% code coverage rate. Actively helped others and shared knowledge, contributing to a collaborative and productive team environment. Consistently sought out new challenges and opportunities to learn and improve skills. Contributed to innovative solutions and approaches to development challenges, resulting in a 20% increase in efficiency. Confident in adding significant value to any project.';
+export const about_1: string = 'As a Full Stack Developer with over 10 years of experience, I design and implement dynamic, user-oriented web applications using JavaScript, TypeScript, React, Node.js, and Express.js. My expertise spans across both front-end and back-end development. I can create scalable solutions right from end to end. Currently working as Senior Frontend Engineer at Heaptify, I drive the development of challenging features, which have improved the performance and user experience.';
+
+export const about_2: string = 'I have always focused on writing clean, maintainable code and optimizing system performance, hence delivering quality results consistently. I enjoy solving complex challenges with cross-functional teams to align efforts in development toward the goals of business for effective and efficient outcomes. ';
+
+export const about_3: string = 'Being passionate about continuous learning, I keep up with the latest technologies and contribute to the developer community via knowledge sharing and open-source contributions.';
 
 export const skills: string[] = [
     'JavaScript',
     'TypeScript',
     'React',
+    'Node.js',
+    'TypeORM',
+    'Express.js',
     'Vue.js',
-    'Nuxt',
+    'Nuxt.js',
     'Jest',
+    'React Testing Library',
     'MobX',
     'Redux',
     'Vuex',
-    'Vuetify',
-    'MUI',
     'SCSS',
     'HTML',
     'CSS',
@@ -108,29 +115,55 @@ export const certificates: TCertificate[] = [
 
 export const experiences: TExperience[] = [
     {
-        title     : 'Senior Frontend Developer',
-        company   : 'Deriv',
-        location  : 'Cyberjaya, Malaysia',
-        start_date: 'January 2023',
+        title     : 'Senior Frontend Engineer',
+        company   : 'Heaptify',
+        location  : 'London, United Kingdom',
+        start_date: 'September 2023',
         end_date  : 'Present',
         duration  : '',
         stack     : [
             'reactjs',
             'typescript',
-            'mobx',
+            'graphQL',
+            'redux',
+            'react-testing-library',
+            'AWS',
+            'storybook',
+        ],
+        description: [
+            'Defined optimal technology stacks for projects to ensure robust and scalable solutions.',
+            'Led project management efforts, ensuring timely delivery within defined scope parameters.',
+            'Orchestrated cross-functional collaboration to align projects with timelines, goals, and comprehensive development strategies.',
+            'Coordinated tasks, delegated responsibilities, and monitored progress to maintain project momentum.',
+            'Integrated a comprehensive component library for consistency and efficiency, alongside implementing unit tests to ensure reliability and quality.',
+            'Utilized GraphQL to streamline backend communications for efficient data retrieval and management.',
+            'Integrated projects with a micro-frontend architecture to enhance scalability and maintainability.',
+        ]
+    },
+    {
+        title     : 'Senior Frontend Developer',
+        company   : 'Deriv',
+        location  : 'Cyberjaya, Malaysia',
+        start_date: 'January 2023',
+        end_date  : 'July 2023',
+        duration  : '7 months',
+        stack     : [
+            'reactjs',
             'javascript',
+            'typescript',
+            'mobx',
+            'jest',
             'react-testing-library',
             'storybook',
             'sass'
         ],
         description: [
-            'Collaborated with cross-functional teams to design, develop, and deploy 20+ new features for Deriv\'s web applications utilizing React, resulting in a more dynamic and user-friendly experience.',
-            'Contributed to the development of Deriv\'s style guide and component library, resulting in 30% faster development time for modular and customizable web applications.',
-            'Actively participated in 100+ code reviews, providing constructive feedback to maintain code quality and best practices.',
-            'Demonstrated strong problem-solving skills and worked under tight deadlines in a fast-paced, dynamic environment, utilizing agile methodologies to manage project timelines and prioritize tasks.',
-            'Kept up-to-date with the latest technologies and frameworks to remain competitive.',
-            'Wrote comprehensive unit tests for all 50+ components, ensuring reliability and maintainability.',
-            'Managed states in complex applications using MobX for efficient and streamlined user experiences.'
+            'Collaborated cross-functionally to deploy 20+ dynamic features for Deriv\'s web apps using React for improved user experience.',
+            'Developed and maintained a Storybook instance for Deriv\'s design system, collaborated with designers and developers to create reusable UI components, and contributed to the component library.',
+            'Implemented MobX to manage complex application states in Deriv\'s web applications, which led to more predictable user interactions and more robust and maintainable user interfaces.',
+            'Wrote comprehensive unit tests for 50+ components, ensuring reliable and maintainable code with reduced bugs.',
+            'Actively participated in 100+ code reviews, maintaining best practices and code quality, while sharing knowledge through participating in meetings and presenting on various topics.',
+            'Worked under tight deadlines in a fast-paced environment using agile methodologies, and demonstrated strong problem-solving skills as a Release Manager.',
         ]
     },
     {
@@ -142,9 +175,9 @@ export const experiences: TExperience[] = [
         duration  : '10 months',
         stack     : [
             'reactjs',
-            'typescript',
-            'mobx',
             'javascript',
+            'mobx',
+            'jest',
             'react-testing-library',
             'storybook',
             'sass'

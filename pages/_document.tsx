@@ -14,11 +14,11 @@ const MyDocument = (props: TProps) => {
                 <meta charSet="utf-8" />
                 <meta
                     name="title"
-                    content="Hamid Yaftian | Frontend Developer"
+                    content="Hamid Yaftian | Full Stack Developer"
                 />
                 <meta
                     name="description"
-                    content="I'm frontend developer, creating open-source projects and writing about web development, code, testing, tools, and sometimes life."
+                    content="I'm full stack developer, creating open-source projects and writing about web development, code, testing, tools, and sometimes life."
                 />
                 <meta
                     name="keywords"

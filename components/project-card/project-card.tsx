@@ -28,7 +28,7 @@ const ProjectCard = ({ project }: TProps) => {
                     </span>
                 )}
                 {project.archived && (
-                    <span className="text-xs bg-red-400 px-1 py-0.5 rounded-md text-white">
+                    <span className="text-xs bg-red-400 px-1 py-0.5 rounded-md text-white ml-2">
                         {t('projects.is_archived')}
                     </span>
                 )}
